@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    font:bold 14px Aria,sans-serif;
+}
+
+html {
+    height: 100%;
+    background: white;
+    background: radial-gradient(circle, #ffffff 20%, #ccc);
+    background-size: cover;
+}
+
+#calculator {
+    width: 325px;
+    height: auto;
+
+    margin: 100px auto;
+    padding: 20px 20px 9PX;
+
+    background: #c61dbb;
+    background: linear-gradient(#ce2f07, #8bceec);
+    border-radius: 3px;
+    box-shadow: 0px 4px #15d34b, 0px 10px 15px rgba(0,0,0,0.2);
+}
+#screen {
+    float: right;
+
+    height: 40px;
+    width: 212px;
+
+    padding: 0 10px;
+
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
+    font-size: 17px;
+    line-height: 40px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    text-align: right;
+    letter-spacing: 1px;
+}
+.keys, .top {
+    overflow: hidden;
+}
+.keys span, #clear {
+    float: left;
+    position: relative;
+    top: 0;
+    cursor: pointer;
+    width: 66px;
+    height: 36px;
+    background: rgb(221, 17, 17);
+    border-radius: 3px;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    margin: 0 7px 11px 0;
+    color: #888;
+    line-height: 36px;
+    text-align: center;
+    user-select: none;
+}
+
+.keys span.operator {
+    background: #96123e;
+    margin-right: 0;
+}
+.keys span.eval {
+    background: #310ee3;
+    box-shadow: 0px 4px #9da853;
+    color: #888e5f;
+}
+
+.keys span.eval:hover {
+    background: #d2cc19;
+    box-shadow: 0px 4px #717a33;
+    color: #ffffff;
+}
+
+.keys span.eval:active {
+    box-shadow: 0px 0px #717a33;
+    top: 4px;
+}
+
+#clear {
+    background: #16cd16;
+    box-shadow: 0px 4px #41e565;
+    color: white;
+}
+
+#clear:hover {
+    background: #ed0817;
+    box-shadow: 0px 4px #7454d3;
+    color: white;
+}
+
+#clear:active {
+    top: 4px;
+    box-shadow: 0px 0px #e00425;
+}
+.keys span:hover {
+    background: #89caf6;
+    box-shadow: 0px 4px #54d378;
+    color: white;
+}
+
+.keys span:active {
+    box-shadow: 0px 0px #e74012;
+    top: 4px;
+}
+    </style>
+</head>
+<body onload="load()">
+    <div id="calculator">
+        <div class="top">
+            <span id="clear">C</span>
+            <div id="screen"></div>
+        </div>
+
+        <div class="keys">
+            <span>7</span>
+            <span>8</span>
+            <span>9</span>
+            <span class="operator">+</span>
+            <span>4</span>
+            <span>5</span>
+            <span>6</span>
+            <span class="operator">-</span>
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span class="operator">÷</span>
+            <span>0</span>
+            <span>.</span>
+            <span class="eval">=</span>
+            <span class="operator">x</span>
+        </div>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+    
+</body>
+</html>
